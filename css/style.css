@@ -1,11 +1,6 @@
 body {
   font-family: 'Noto Sans JP', sans-serif;
   color: #333;
-  scroll-padding-top: 94px;
-}
-
-html {
-  scroll-padding-top: 94px;
 }
 
 h1 {
