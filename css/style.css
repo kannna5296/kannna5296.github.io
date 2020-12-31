@@ -392,7 +392,6 @@ a {
   width: 322px;
 }
 
-
 .works .card__body {
   position: relative;
   height:200px;
@@ -413,6 +412,36 @@ a {
 
 .works .works--wrapper {
   display: flex;
+}
+
+.swiper-container {
+  z-index: 0;
+}
+
+.slide-item {
+  border: 1px solid #DDDDDD;
+  border-radius: 8px;
+  max-width: 322px;
+  display: inline-block;
+  color:black;
+  height:400px;
+}
+
+.works-img {
+  max-height: 210px;
+}
+
+.works-ttl {
+  font-size: 16px;
+  min-height: 43px;
+  line-height: 1.69;
+  margin: 23px 19px 0 18px;
+}
+
+.works-text {
+  font-size: 14px;
+  line-height: 1.71;
+  margin: 34px 18px 34px 18px;
 }
 
 .contact {
@@ -562,7 +591,7 @@ a {
   }
 
   h3 {
-    font-size:24px;
+    font-size:28px;
   }
 
   h4 {
@@ -696,6 +725,10 @@ a {
     width: 370px;
   }
 
+  .features .contents-wrapper {
+    max-width: 800px;
+  }
+
   .price {
     height: 800px;
   }
@@ -710,8 +743,8 @@ a {
   }
 
   .features ol li .content .img {
-    width: 300px;
-    margin-top: 30px;
+    width: 250px;
+    margin-top: 50px;
   }
 
   .faq .contents-wrapper #acMenu {
@@ -805,6 +838,10 @@ a {
     padding-bottom:10px;
   }
 
+  .features h4 {
+    font-size:20px;
+  }
+
   .features ol li .content .img {
     width: 250px;
     margin: 0 auto;
@@ -862,7 +899,7 @@ a {
   }
 
   .works {
-    height: 750px;
+    height: 650px;
   }
 
   .works .car__img {
@@ -905,8 +942,17 @@ a {
     font-size:20px;
   }
 
+  .features {
+    height: 1800px;
+  }
+
   .features ol li .content .desc p {
     font-size:12px;
+  }
+
+  .features ol li .content .desc h4 {
+    font-size:16px;
+    line-height: 40px;
   }
 
   .price .contents-wrapper table {
@@ -940,6 +986,10 @@ a {
       font-size:11px;
     }
 
+    .features h4 {
+      font-size:14px;
+    }
+
     .faq .contents-wrapper ol li {
       padding: 15px;
     }
@@ -952,7 +1002,5 @@ a {
     .blog {
       height: 1300px;
     }
-
-
   }
 

@@ -1,28 +1,22 @@
-//WORKSのスライダー
-if ($(window).width() > 425) {
-    jQuery(document).ready(function ($) {
-        $('.bxslider').bxSlider({
-            auto: true,
-            pause: 5000,
-            maxSlides: 5,
-            moveSlides: 1,
-            slideWidth: 322,
-            slideMargin: 56,
-            touchEnabled: true,
-            pager: false
-        });
-    })
-} else {
-    jQuery(document).ready(function ($) {
-        $('.bxslider').bxSlider({
-            auto: true,
-            pause: 5000,
-            maxSlides: 1,
-            moveSlides: 1,
-            slideWidth: $(window).width(),
-            slideMargin: 10,
-            touchEnabled: true,
-            pager: false
-        });
-    })
-};
+// スライダー
+var mySwiper = new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+    },
+    slidesPerView: 1.5,
+    centeredSlides: true,
+    spaceBetween: 20,
+    breakpoints: {
+        897: {
+            slidesPerView: 4,
+            centeredSlides: true,
+            spaceBetween: 56,
+        },
+        481: {
+            slidesPerView: 3,
+            centeredSlides: true,
+        },
+    },
+});
