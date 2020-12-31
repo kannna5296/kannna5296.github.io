@@ -8,7 +8,8 @@ if ($(window).width() > 425) {
             moveSlides: 1,
             slideWidth: 322,
             slideMargin: 56,
-            touchEnabled: true
+            touchEnabled: true,
+            pager: false
         });
     })
 } else {
@@ -20,7 +21,8 @@ if ($(window).width() > 425) {
             moveSlides: 1,
             slideWidth: $(window).width(),
             slideMargin: 10,
-            touchEnabled: true
+            touchEnabled: true,
+            pager: false
         });
     })
 };
