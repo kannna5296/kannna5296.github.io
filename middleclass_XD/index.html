@@ -306,7 +306,7 @@
           <label class="label-txt">メールアドレス</label>
           <label class="require">必須</label>
         </div>
-        <input style="border:none" name="entry.62884226" type="text" class="smalltxt" required>
+        <input style="border:none" name="entry.62884226" type="email" class="smalltxt" required>
 
         <div class="label-wrapper">
           <label class="label-txt">お問い合わせ内容</label>
@@ -314,9 +314,9 @@
         </div>
         <textarea style="border:none" name="entry.1441764612" type="text" class="largetxt" required></textarea>
         <div class="privacy">
-          <label><input class="checkbox" type="checkbox" required>プライバシーポリシーに同意する</label>
+          <label><input class="checkbox" id="privacycheck" type="checkbox" required>プライバシーポリシーに同意する</label>
         </div>
-        <input type="submit" class="btn ly_btn submit-btn" value="送信する">
+        <input type="submit" class="btn ly_btn submit-btn" id="js-submit" value="送信する" disabled>
         <p class="end-message">送信が完了しました。<br>お問い合わせありがとうございました！</p>
         <p class="false-message">送信できませんでした。</p>
       </form>
@@ -346,6 +346,7 @@
   <script src="js/hamburger.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/scroll.js"></script>
+  <script src="js/validation.js"></script>
   <!-- ふわっと表示 -->
   <script>
     AOS.init();
