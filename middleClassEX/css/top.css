@@ -1,0 +1,794 @@
+/* セクションの見出し共通 */
+.section-logo {
+  width: 40px;
+  height: 40px;
+  display:inline-block;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.section-top {
+  font-size: 36px;
+  margin-top: 20px;
+  margin-bottom: 66px;
+  text-align: center;
+}
+/* セクションの見出し共通終わり */
+
+/* メインビジュアル開始 */
+.mainvisual {
+  position: relative;
+  height: 100vh;
+}
+
+  /* Swiper開始 */
+@-webkit-keyframes zoomUp {
+  0% {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  }
+  100% {
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+  }
+  }
+  
+  @keyframes zoomUp { 
+    /* //1.15倍させる指定 */
+  0% {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  }
+  100% {
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+  }
+  }
+  
+  .swiper-slide-active .slide-img,
+  .swiper-slide-duplicate-active .slide-img,
+  .swiper-slide-prev .slide-img { 
+  /* 12秒かけて拡大させる */
+  -webkit-animation: zoomUp 12s linear 0s;
+  animation: zoomUp 12s linear 0s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  .swiper-slide {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  }
+  .slide-img {
+  background-size: cover;
+  background-position: center center; 
+  /* //背景画像は中央を軸に表示させる */
+  height: 100vh; 
+  /* //600pxの高さで表示させる */
+  }
+  /* Swiper終了 */
+
+.mainvisual-title {
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  font-size: 34px;
+  font-weight: bold;
+  letter-spacing: 22px;
+  line-height: 51px;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+
+  width:100px;
+  height: 500px;
+
+  top: 300px;
+  right: 25%;
+}
+/* メインビジュアル終了*/
+
+/* コンセプト開始 */
+.concept {
+  background-image: url("../images/bg.jpg");
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.concept .contents-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  direction:RTL
+}
+
+.concept-title {
+  font-size: 28px;
+  letter-spacing: 17px;
+  line-height: 53px;
+
+  margin-top: 64px;
+  font-weight: bold;
+  direction:LTR;
+
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+
+.concept-txt {
+  font-size: 18px;
+  letter-spacing: 6px;
+  line-height: 33px;
+
+  margin-top: 155px;
+  direction:LTR;
+
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+
+.concept-txt span {
+  text-combine-upright: all;
+  letter-spacing: 0;
+}
+
+.concept-sign {
+  font-size: 22px;
+  letter-spacing: 6px;
+  line-height: 33px;
+
+  margin-top: 520px;
+  direction:LTR;
+
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+/* コンセプト終了 */
+
+/* サービス詳細開始 */
+.detail .contents-wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  margin-top:108px;
+}
+
+.detail-content {
+  display: flex;
+  margin-bottom: 108px;
+}
+
+.detail-content figure img{
+  max-height: 450px;
+  min-height: 425px;
+  object-fit: cover;
+}
+
+.detail-button:hover,
+.detail-button:focus {
+  background-color: #000;
+  color:#fff;
+  transition: .3s;
+  padding: 3px 10px;
+}
+
+.detail-content:nth-child(even){
+  flex-direction: row-reverse;
+}
+
+.detail-content:nth-child(even) .detail-txts{
+  margin-left: 0;
+  margin-right: 200px;
+}
+
+.detail-txts{
+ margin-left: 70px;
+ margin-top: 12px;
+}
+
+.detail-heading {
+  font-size: 36px;
+  line-height: 56px;
+  font-weight: bold;
+}
+
+.detail-txt {
+  margin-top: 55px;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.detail-button {
+  margin-top: 55px;
+  width: 200px;
+  height: 56px;
+
+  font-size: 16px;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+/* サービス詳細終了 */
+
+/* おすすめプラン開始 */
+.plan {
+  /* height: 775px; */
+  background-image: url("../images/bg02.jpg");
+  background-size:cover;
+  background-position: center center;
+}
+
+.plan .contents-wrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.plan-contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+.plan-card {
+  width: 331px;
+}
+
+.plan-card img {
+  height: 210px;
+  width: 100%;
+}
+
+.plan-title {
+  font-size: 20px;
+  line-height: 32px;
+  margin-top: 32px;
+  font-weight: bold;
+}
+
+.plan-txt {
+  font-size: 16px;
+  line-height: 32px;
+  margin-top: 36px;
+  font-weight: bold;
+}
+
+.plan-link:hover,
+.plan-link:focus {
+  opacity: 0.6;
+  transition: .3s;
+}
+
+.plan-button {
+  margin-top: 36px;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 56px;
+
+  font-size: 16px;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+/* おすすめプラン終了 */
+
+/*　ニュース開始 */
+.tab-menu {
+  display: flex;
+  width: 200px;
+  margin: 0 auto;
+
+  margin-bottom: 49px;
+}
+
+.tab-menu .tab-menu__item{
+  width: 150px;
+  text-align: center;
+}
+
+.tab-trigger {
+  padding: 5px 10px;
+  box-shadow: 2px 2px;
+}
+
+.tab-trigger.is-active {
+  background-color: rgb(248, 173, 143);
+}
+
+.tab-content__item {
+  display:none;
+}
+
+.tab-content__item.is-active {
+  display:block;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.tab-content__item .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width:100%;
+  margin: 0 auto;
+}
+
+.tab-content__item .container .card {
+  width: 570px;
+  height: 130px;
+  background-color:#f6f6f6;
+
+  margin-bottom:20px;
+}
+
+/* お知らせのカード用css開始 */
+.card {
+  display: flex;
+  padding: 15px 10px;
+}
+
+.card:hover,
+.card:focus {
+  opacity: 0.6;
+  transition: .3s;
+}
+
+.card__img-wrapper {
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
+}
+
+.card__body {
+  margin-left: 20px;
+}
+
+.card__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.card__time {
+  font-size: 14px;
+}
+
+.card__txt {
+  font-size: 14px;
+  margin-top: 5px;
+}
+/* お知らせのカード用css終了 */
+/*　ニュース終了 */
+
+/* アクセス部開始 */
+.access {
+  background-image: url("../images/bg.jpg");
+  padding-bottom: 50px;
+}
+
+.access-first {
+  display: flex;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.access-first figure {
+  height: 100%;
+  width: 656px;
+}
+
+.access-first figure img{
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.access-detail {
+  margin-left: 50px;
+  margin-right: -300px;
+}
+
+.access-heading {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.access-txt {
+  font-size: 14px;
+  padding: 12px 0;
+}
+
+.googlemap {
+  text-align: center;
+  margin-top: 66px;
+}
+
+.googlemap iframe {
+  width: 600px;
+  height: 400px;
+}
+/* アクセス部終了 */
+
+@media screen and (max-width: 1025px) {
+
+  .detail {
+    padding-top: 50px;
+  }
+
+  .detail .contents-wrapper {
+    max-width: 950px;
+  }
+
+  .detail-content figure {
+    width: 50%;
+  }
+
+  .detail-content:nth-child(even) figure {
+    width: 50%;
+  }
+
+  .detail-content:nth-child(even) .detail-txts {
+    margin-right:180px;
+  }
+
+  .detail-txts {
+    margin-left:30px;
+  }
+
+  .detail-heading {
+    font-size: 30px;
+  }
+
+  .plan .contents-wrapper {
+    max-width: 950px;
+  }
+
+  .plan-card {
+    width: 300px;
+  }
+
+  .plan-button {
+    margin: 0 auto;
+    margin-top: 36px;
+    margin-bottom:20px;
+    display: block;
+  }
+
+  .tab-content__item.is-active {
+    display:block;
+    max-width: 950px;
+    margin: 0 auto;
+  }
+
+  .tab-content__item .container .card {
+    width: 460px;
+  }
+
+  .access-first .contents-wrapper {
+    max-width: 950px;
+  }
+
+  .access-detail {
+    margin-left: 20px;
+    margin-right:0;
+  }
+
+  .detail .contents-wrapper {
+    width: 100%;
+    margin-top:0;
+  }
+}
+
+@media screen and (max-width: 769px) {
+
+  .mainvisual-title {
+    top: 200px;
+  }
+
+  .concept .contents-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .detail .contents-wrapper {
+    width: 100%;
+    margin-top:0;
+  }
+  
+  .detail-content {
+    margin:0;
+    width: 90%;
+    margin: 0 auto;
+    height: 800px;
+    position: relative;
+  }
+  
+  .detail-txts {
+    width: 100%;
+    margin:0;
+    margin: 10px 30px;
+    position: absolute;
+    top:450px;
+  }
+  
+  .detail-txt {
+    margin-top: 15px;
+  }
+  
+  .detail-button {
+    margin-top: 20px;
+  }
+  
+  .detail-content:nth-child(even) {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    flex-direction: row;
+  }
+  
+  .detail-content:nth-child(even) .detail-txts{
+    margin:0;
+    margin: 10px 30px;
+  }
+  
+  .detail-content figure,
+  .detail-content:nth-child(even) figure {
+    position: absolute;
+  
+    width: 100%;
+    height: 450px;
+    margin: 0 auto;
+  
+    overflow: hidden;
+  
+    z-index: -1;
+  }
+  
+  .detail-content figure img {
+    overflow: hidden;
+    width: 100%;
+    height: 450px;
+  }
+
+
+
+  .plan .contents-wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .plan-contents {
+    display:block;
+  }
+  
+  .plan-content {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom:50px;
+  }
+  
+  .plan-card {
+    width: 100%;
+    /* height: 680px; */
+  }
+  
+  .plan-card img{
+    height: 450px;
+    overflow: hidden;
+  }
+  
+  .plan-title {
+    font-size: 24px;
+    margin-top:15px;
+  }
+  
+  .plan-txt {
+    margin-top: 20px;
+  }
+  
+  .plan-button {
+    margin:0;
+    margin-top: 10px;
+  }
+
+  .tab-content__item.is-active {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  .tab-content__item .container {
+    display: block;
+  }
+  
+  .tab-content__item .container .card {
+    width: 100%;
+  }
+
+  .access-first {
+    display: block;
+  }
+  
+  .access-first figure {
+    width: 656px;
+    margin: 0 auto;
+  }
+  
+  .access-detail {
+    width: 656px;
+    margin: 0 auto;
+    margin-top:10px;
+  }
+  
+  .access-heading {
+    font-size: 20px;
+  }
+  
+  .access-txt {
+    font-size: 16px;
+  }
+  
+  .googlemap {
+    padding-bottom: 30px;
+  }
+
+}
+
+@media screen and (max-width: 426px) { 
+ 
+  /* セクションの見出し共通 */
+  .section-top {
+    font-size: 30px;
+  }
+  /* セクションの見出し共通終わり */
+
+  .mainvisual-title {
+    writing-mode: horizontal-tb;
+    font-size: 24px;
+    text-align: center;
+    width: 300px;
+    height: 100px;
+
+    top: 40%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+
+    letter-spacing: 15px;
+  }
+  
+  .concept {
+    padding-bottom: 0;
+  }
+
+  .concept .contents-wrapper {
+    direction: LTR;
+    display: block;
+    margin-left:15px;
+    margin-right:15px;
+  }
+
+  .concept-title {
+    writing-mode: horizontal-tb;
+    direction: LTR;
+
+    font-size:20px;
+    line-height: 30px;
+    letter-spacing: 3px;
+
+    margin:0;
+    padding-top:30px;
+    padding-bottom: 20px;
+  }
+
+  .concept-txt {
+    writing-mode: horizontal-tb;
+    direction: LTR;
+    margin-top:0;
+
+    font-size:14px;
+    line-height: 25px;
+    letter-spacing: 1px;
+
+    padding:10px 0;
+  }
+
+  .concept-sign {
+    writing-mode: horizontal-tb;
+    direction: LTR;
+    margin-top:0;
+
+    padding:10px 0;
+    text-align: right;
+  }
+
+  .detail-content {
+    max-height: 650px;
+  }
+
+  .detail-txts {
+    top:300px;
+    margin: 10px;
+  }
+
+  .detail-heading {
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 1px;
+  }
+
+  .detail-txt {
+    font-size:12px;
+    line-height: 20px;
+    letter-spacing: 1px;
+  }
+
+  .detail-content figure {
+    height: 300px;
+  }
+
+  .detail-content figure img {
+    max-height: 300px;
+    min-height: 200px;
+  }
+  
+  .detail-content:nth-child(even) .detail-txts{
+    top:300px;
+    margin: 10px;
+  }
+
+  .plan .contents-wrapper {
+    width: 95%;
+  }
+  
+  .plan-content{
+    width: 100%;
+  }
+
+  .plan-card {
+   margin-bottom: 30px;
+  }
+  
+  .plan-card img {
+    height: 300px;
+    width: 100%;
+    margin:0 auto;
+    object-fit: cover;
+  }
+  
+  .plan-title {
+    width: 100%;
+    margin:5px auto;
+  }
+
+  .plan-txt {
+    width: 100%;
+    margin:20px auto;
+  }
+
+  .access-first figure {
+    width: 90%;
+  }
+  
+  .access-detail {
+    width: 90%;
+  }
+  
+  .googlemap iframe {
+    width: 95%;
+    height: 400px;
+  }
+
+}
+
+@media screen and (max-width: 426px) { 
+
+  .detail-txts {
+    margin:0;
+  }
+  
+  .googlemap iframe {
+    height: 300px;
+  }
+
+  .plan-card img {
+    height: 200px;
+  }
+}

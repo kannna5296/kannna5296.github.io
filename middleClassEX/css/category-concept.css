@@ -1,0 +1,14 @@
+.category-concept {
+  height: 200px;
+}
+
+.category-concept .contents-wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.category-concept-txt {
+  padding-top: 50px;
+  text-align: center;
+  line-height: 32px;
+}

@@ -1,0 +1,121 @@
+.mainvisual-img__wrapper {
+  height: 400px;
+  /* object-fit: cover; */
+}
+
+.mainvisual-img__wrapper .mainvisual-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.mainvisual {
+  position:relative;
+  height: 400px;
+  width: 100%;
+}
+
+.mainvisual-title {
+  position:absolute;
+  writing-mode: horizontal-tb;
+  top:50%;
+  transform: translateY(-50%);
+  left:50%;
+  transform: translateX(-50%);
+  text-align: center;
+
+  width:150px;
+  height: 50px;
+  letter-spacing: 0;
+}
+
+.room-concept {
+  height: 200px;
+}
+
+.room-concept-txt {
+  padding-top: 50px;
+  text-align: center;
+  line-height: 32px;
+}
+
+.detail {
+  height: 1500px;
+}
+
+.detail .contents-wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.detail-content {
+  height: 500px;
+  position: relative;
+}
+
+.detail-img img {
+  height: 300px;
+  width: 525px;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:2;
+}
+
+.detail-txts {
+  background-image: url("../images/bg.jpg");
+  width:813px;
+  height: 381px;
+  padding: 30px;
+  padding-left: 300px;
+  position:absolute;
+  top:50px;
+  right:0;
+  z-index:1;
+}
+
+.detail-title {
+  font-size:24px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.detail-text {
+  font-size:16px;
+  line-height:32px;
+  margin-top: 30px;
+}
+
+.detail-annotation {
+  font-size:14px;
+  margin-top: 30px;
+}
+
+/* 偶数番目は逆 */
+.detail-content:nth-child(even) .detail-img img {
+  height: 300px;
+  width: 525px;
+  position:absolute;
+  top:0;
+
+  /* 偶数番目は右上 */
+  left:100%;
+  transform: translateX(-100%);
+  z-index:2;
+}
+
+.detail-content:nth-child(even) .detail-txts {
+  background-image: url("../images/bg.jpg");
+  width:813px;
+  height: 381px;
+  padding-left: 60px;
+  position:absolute;
+  top:50px;
+  left:0;
+  z-index:1;
+}
+
+.detail-content:nth-child(even) .detail-txts .detail-text {
+  width: 450px;
+}
+/* 偶数番目は逆 終了 */

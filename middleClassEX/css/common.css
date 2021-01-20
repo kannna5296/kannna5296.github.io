@@ -1,0 +1,111 @@
+/* 共通部開始 */
+body {
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  color: #333;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 34px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 46px;
+}
+
+ul,ol,li,dl,dt,dd {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color:#000;
+}
+
+/* モーダルCSSここから */
+.modalArea {
+  visibility: hidden; /* displayではなくvisibility */
+  opacity : 0;
+  position: fixed;
+  z-index: 10; /* サイトによってここの数値は調整 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .4s;
+}
+
+.modalBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30,30,30,0.9);
+}
+
+.modalWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  width: 70%;
+  height: 600px;
+  max-width: 550px;
+  padding: 10px 60px;
+  background-color: #fff;
+}
+
+.closeModal {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.is-show { /* モーダル表示用クラス */
+  visibility: visible;
+  opacity : 1;
+}
+
+.reserve-title {
+  font-size: 20px;
+  text-align: center;
+
+  padding: 30px;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+.reserve-form {
+  margin-top: 30px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.reserve-label-wrapper {
+  padding: 12px 0 7px 0;
+}
+
+.reserve-input {
+  width: 400px;
+  height: 30px;
+  margin: 0 auto;
+  border:1px solid #E7E7E7;
+}
+
+.reserve-input::placeholder {
+  padding-left: 5px;
+}
+
+.reserve-submit-btn {
+  width: 198px;
+  height: 42px;
+
+  display: block;
+  margin:0 auto;
+margin-top: 50px;
+}
+
+/* モーダルCSSここまで */

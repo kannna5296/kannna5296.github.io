@@ -1,0 +1,43 @@
+.breadcrumb {
+  height: 50px;
+}
+
+.breadcrumb .contents-wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+
+  padding-top: 15px;
+}
+
+/* パンくず */
+.breadcrumb-wrapper {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumb-wrapper li {
+  display: inline;/*横に並ぶように*/
+  list-style: none;
+  font-weight: bold;/*太字*/
+}
+
+.breadcrumb-wrapper li:after {/* >を表示*/
+  content: '>';
+  padding: 0 0.2em;
+  color: #555;
+}
+
+.breadcrumb-wrapper li:last-child:after {
+  content: '';
+}
+
+.breadcrumb-wrapper li a {
+  text-decoration: none;
+  color: #52b5ee;/*色*/
+}
+
+.breadcrumb-wrapper li a:hover {
+  text-decoration: underline;
+}
+/* パンくず終了 */

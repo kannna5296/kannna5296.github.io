@@ -1,0 +1,269 @@
+.rounded-btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding:10px 20px;
+  width: 150px;
+  max-width: 100%;
+  background-color: #978F10;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  font-size: 1.125rem;
+  color:#fff;
+  transition: 0.25s;
+
+  /* 本来関係ないけど見やすいように */
+  /* margin:0.5rem 0.5rem 0.5rem 550px; */
+  margin: 0.5rem 1.5rem;
+}
+
+.fa-calendar-check {
+  margin-right: 5px;
+}
+
+.fa-arrow-right {
+  margin-left: 5px; 
+}
+
+.rounded-btn:focus,
+.rounded-btn:hover {
+  background-color: #fff;
+  color: #978F10;
+  border-color: currentColor;
+}
+
+/* PCではハンバーガーボタン非表示 */
+#js-hamburger {
+    display: none;
+  }
+  
+  #js-global-menu {
+    width: 80%;
+    height: 70px;
+  }
+  
+  #js-global-menu nav {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .globalnavi-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+  }
+  
+  .globalnavi {
+    display: flex;
+    justify-content: space-between;
+    min-width: 150px;
+  }
+  
+  .globalnavi li {
+    margin: auto 0;
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  
+  #js-global-menu nav ul li a .fa-calendar-check {
+    height: 15px;
+    margin: 5px;
+  }
+  
+  .globalnavi-link {
+    padding: 10px 20px;
+  }
+  
+  .globalnavi-link:hover,
+  .globalnavi-link:focus {
+    background-color: #525252;
+    color:#fff;
+    transition: .3s;
+  }
+  
+  .is-fixed {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    z-index:10;
+    background: rgba(255,255,255,0.6);
+  }
+  /* 共通部終了 */
+  
+  /* ヘッダ開始 */
+  header {
+    /* スクロールされるまでは非表示 */
+    display:none;
+  }
+  
+  
+  .is-fixed .header-wrapper {
+    max-width:1920px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .header-top {
+    height: 70px;
+    width: 20%;
+    min-width: 210px;
+    display: flex;
+    align-items: center;
+    color:#000;
+  }
+  
+  .header-logo {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+  /* ヘッダ終了 */
+
+  @media screen and (max-width: 769px) {
+
+    #js-hamburger {
+      display: block;
+    }
+
+    #js-global-menu {
+      width:100%;
+      height: 100%;
+    }
+    
+    #js-global-menu nav {
+      height: 400px;
+    }
+
+    #js-drawer-background {
+      height: calc( 100% - 400px );
+    }
+
+    .hamburger {
+      position: fixed;
+      top: 16px;
+      right: 20px;
+      z-index: 3;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid #333;
+      box-shadow: 0 0 2rem transparent;
+      outline: none;
+      -webkit-transition: all .3s ease-in-out;
+              transition: all .3s ease-in-out;
+    }
+
+    .hamburger:hover,
+    .hamburger:focus {  
+      box-shadow: 0 0 .5rem rgba(161, 161, 161, 0.5);
+    }
+    
+    .hamburger__line {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 18px;
+      height: 2px;
+      background-color: #333;
+      -webkit-transition: inherit;
+              transition: inherit;
+      }
+
+      .hamburger__line::before,
+      .hamburger__line::after {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: inherit;
+        content: '';
+        -webkit-transition: inherit;
+                transition: inherit;
+      }
+    
+    .hamburger__line::before {
+      top: -5px;
+    }
+    .hamburger__line::after {
+      top: 5px;
+    }
+    .hamburger[aria-expanded="true"] {
+      border: 1px solid #fff!important;
+    }
+    .hamburger[aria-expanded="true"] .hamburger__line {
+      background-color: transparent;
+    }
+
+    .hamburger[aria-expanded="true"] .hamburger__line::before,
+    .hamburger[aria-expanded="true"] .hamburger__line::after {
+      top: 0;
+      background-color:#000;
+    }
+
+    .hamburger[aria-expanded="true"] .hamburger__line::before {
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+    }
+    
+    .hamburger[aria-expanded="true"] .hamburger__line::after {
+      -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+    }
+    
+    .sp-global-menu {
+      position: fixed;
+      width: 100vw;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      height: 100vh;
+      background-color: rgba(0,0,0,0.5);
+      color: #fff;
+      visibility: hidden;
+    }
+
+    .globalnavi-wrapper {
+      display:block;
+      position:absolute;
+      top:70px;
+    }
+
+    .globalnavi {
+      display:block;
+    }
+
+    .globalnavi li {
+      width: 100%;
+      margin:0;
+      padding:10px 0;
+    }
+
+    .globalnavi-link {
+      font-size: 25px;
+      color:#fff;
+      display:block;
+      width: 100%;
+    }
+
+    .globalnavi-link:hover, 
+    .globalnavi-link:focus {
+      background-color: #fff;
+      color:#000;
+    }
+
+    .rounded-btn {
+      font-size: 25px;
+      width: 200px;
+    }
+    }
