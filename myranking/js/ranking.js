@@ -1,3 +1,6 @@
+//トークン取得
+
+//トラック取得
 var request = new XMLHttpRequest();
 request.open('GET', 'https://api.spotify.com/v1/me/top/tracks', true);
 
