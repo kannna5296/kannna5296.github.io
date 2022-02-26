@@ -1,24 +1,32 @@
 //トークン取得
-var tokenAAA = 'token';
-
-async function getAccessToken() {
-
-const res =  await fetch('https://accounts.spotify.com/api/token', {
+//多分取得するトークン違う
+fetch('https://accounts.spotify.com/api/token', {
   mode: 'cors',
   method: 'POST',
   headers: {
-    'Authorization': 'Basic YzZmNjg0NjdjYWUwNDY2M2E1YWNiZmE2YmY4MDRjOWU6YmE0NDUwOGU0YTQzNDhiNzg3YjM2ZmFlODY4ZjE3Y2Q=',
+    'Authorization': 'Basic ',
     'Content-Type': 'application/x-www-form-urlencoded'
   },
-  body: 'grant_type=client_credentials'});
+  body: 'grant_type=client_credentials'})
+  .then((res) => {
+    res.json().then(tokens => {
+      getRanking(tokens.access_token);
+    })
+  });
 
-resJson = await res.json();
-console.log(resJson.access_token);
-tokenAAA = resJson.access_token;
-
+function getRanking(accessToken){
+  console.log(accessToken);
+  fetch('https://api.spotify.com/v1/me/top/tracks?limit=2', {
+  mode: 'cors',
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer ' + accessToken,
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+  }})
+  .then((res) => {
+    res.json().then(res => {
+      console.log(res);
+    })
+  });
 }
-
-
-getAccessToken();
-
-console.log(tokenAAA);
